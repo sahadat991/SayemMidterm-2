@@ -1,5 +1,6 @@
 package parser;
 
+import databases.ConnectDB;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 
@@ -34,6 +35,9 @@ public class ProcessStudentInfo {
 		 *
 		 */
 			public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
+
+				ConnectDB connectDB = new ConnectDB();
+
 				//Path of XML data to be read.
 				String pathSelenium  = System.getProperty("user.dir") +"/src/parser/selenium.xml";
 				String pathQtp = System.getProperty("user.dir") + "/src/parser/qtp.xml";
@@ -72,11 +76,14 @@ public class ProcessStudentInfo {
 
 
 				//Store Qtp data into Qtp table in Database
+				connectDB.InsertDataFromArrayListToMySqlXml(qtpStudents, "QTP", "Students");
 
 				//Store Selenium data into Selenium table in Database
+				connectDB.InsertDataFromArrayListToMySqlXml(seleniumStudents, "Selenium", "Students");
 
 				//Retrieve Selenium and Qtp students from Database
-
+				connectDB.readDataBaseXml("QTP", "Students");
+				connectDB.readDataBaseXml("Selenium", "Students");
 				
 			}
 

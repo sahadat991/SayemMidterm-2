@@ -6,6 +6,7 @@ import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
+import parser.Student;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -275,4 +276,9 @@ public class ConnectDB {
 
     }
 
+    public static void InsertDataFromArrayListToMySqlXml(List<Student> qtpStudents, String qtp, String students) {
+    }
+
+    public static void readDataBaseXml(String qtp, String students) {
+    }
 }

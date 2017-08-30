@@ -25,6 +25,8 @@ public class UseArrayList {
 		arrayList.add("Khulna");
 
 
+
+
 		arrayList.remove(2);
 
 

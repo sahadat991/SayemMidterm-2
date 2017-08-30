@@ -1,5 +1,8 @@
 package datastructure;
 
+import databases.ConnectDB;
+
+import javax.naming.Name;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -15,6 +18,7 @@ public class UseMap {
 		 *
 		 * Use any databases[MongoDB, Oracle, MySql] to store data and retrieve data.
 		 */
+            ConnectDB connectDB = new ConnectDB();
 
         List<String> name = new ArrayList<>();
 
@@ -36,7 +40,6 @@ public class UseMap {
 
         for (Map.Entry entry : country.entrySet()){
             System.out.println(entry.getKey()+ " " + entry.getValue());
-
 
 
         }

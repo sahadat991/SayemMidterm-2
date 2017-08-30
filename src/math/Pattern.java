@@ -1,5 +1,7 @@
 package math;
 
+import databases.ConnectDB;
+
 public class Pattern {
 
 	public static void main(String[] args) {
@@ -9,6 +11,8 @@ public class Pattern {
 		 * Use any databases[MongoDB, Oracle, MySql] to store data and retrieve data.
 		 *
 		 */
+		ConnectDB connectDB = new ConnectDB();
+
 		int ct = 0;
 		for (int i = 100; i >= 0; i--) {
 
