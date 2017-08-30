@@ -1,5 +1,6 @@
 package math;
 
+import databases.ConnectDB;
 import org.jetbrains.annotations.Contract;
 
 import java.util.ArrayList;
@@ -8,6 +9,7 @@ public class FindMissingNumber {
 
     public static void main(String[] args) {
 
+        
         int[] arr = {10, 2, 1, 4, 5, 3, 7, 8, 6};
         System.out.println(findMissing(arr, 10));
     }
@@ -24,5 +26,6 @@ public class FindMissingNumber {
         return (total - total2);
     }
 
+    
 }
 
